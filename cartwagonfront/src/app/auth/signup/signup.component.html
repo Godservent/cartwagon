@@ -1,0 +1,41 @@
+<div class="signup_page">
+  <br>
+  <br>
+  <br>
+  <section class="signup_form_container" fxLayout="column" fxLayoutAlign="center center">
+    <form class="signup_form" #f="ngForm" (ngSubmit)="onSignupSubmit(f)" fxLayout="column" fxLayoutAlign="center center" >
+      <label class="signup_title" >SignUp</label>
+      <br>
+      <mat-form-field>
+        <mat-label class="signup_form_color">Email</mat-label>
+        <input type="email"
+          matInput
+          ngModel
+          name="email"
+          placeholder="example@gmail.com"
+          class="signup_form_color"
+          email
+          required>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label class="signup_form_color">Password</mat-label>
+        <input class="signup_form_color"
+          type="password"
+          matInput
+          ngModel
+          name="password"
+          minlength="8"
+          required
+          #pswd="ngModel">
+          <mat-hint align="end">{{pswd.value?.length}}/8</mat-hint>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label class="signup_form_color">DateofBirth</mat-label>
+        <input class="signup_form_color" type="date" matInput>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">Signup</button>
+    </form>
+  </section>
+</div>

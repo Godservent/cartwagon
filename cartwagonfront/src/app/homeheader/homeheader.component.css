@@ -1,0 +1,22 @@
+.header_title{
+  background-color: rgba(255, 127, 80, 0.726);
+  color:white;
+  padding:9px;
+  border:none;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.header_account{
+  float:right;
+  padding:6px;
+}
+.header_settings{
+  float:right;
+  padding:6px;
+}
+.header_logout{
+  float:right;
+  padding:6px;
+}
