@@ -1,0 +1,26 @@
+.login_page{
+  background-color: rgb(29, 53, 87);
+  width: 100%;
+  height: 100%;
+}
+
+.login_form_color{
+  color:whitesmoke;
+}
+.login_title{
+  color: whitesmoke;
+  background-color: rgba(245, 107, 57, 0.877);
+  font-size: x-large;
+  padding: 6px;
+  border-radius: 17px;
+}
+.login_form{
+  width:350px;
+  background-color: rgb(107, 112, 92);
+  border-radius: 5px;
+  padding: 20px;
+}
+mat-form-field{
+  width:300px;
+}
+

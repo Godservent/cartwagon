@@ -1,0 +1,54 @@
+<div class="signup_page">
+  <br>
+  <br>
+  <br>
+  <section class="signup_form_container" fxLayout="column" fxLayoutAlign="center center">
+    <form class="signup_form" #f="ngForm" (ngSubmit)="onSignupSubmit(f)" fxLayout="column" fxLayoutAlign="center center" >
+      <label class="signup_title" >SignUp</label>
+      <br>
+      <mat-form-field>
+        <mat-label class="signup_form_color">Email</mat-label>
+        <input type="email"
+          matInput
+          ngModel
+          name="email"
+          placeholder="example@gmail.com"
+          class="signup_form_color"
+          email
+          required>
+          <mat-error *ngIf="f.form.get('email')?.invalid">Invalid Email</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field hintLabel="Should be at least 8 charecters">
+        <mat-label class="signup_form_color">Password</mat-label>
+        <input class="signup_form_color"
+          type="password"
+          matInput
+          ngModel
+          name="password"
+          minlength="8"
+          required
+          #signup_pswd="ngModel">
+        <mat-error *ngIf="f.form.get('password')?.invalid">Invalid Password, Should be at least 8 charecters</mat-error>
+        <mat-hint align="end">{{signup_pswd.value?.length}}/8</mat-hint>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+
+
+        <mat-label class="signup_form_color">DateofBirth</mat-label>
+        <input class="signup_form_color"
+          matInput
+          [matDatepicker]="picker"
+          name="datepicker"
+          placeholder="mm/dd/yyyy">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="f.form.get('datepicker')?.invalid">Invalid Date</mat-error>
+
+
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">Signup</button>
+    </form>
+  </section>
+</div>

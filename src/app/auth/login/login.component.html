@@ -1,0 +1,41 @@
+<div class="login_page">
+  <br>
+  <br>
+  <br>
+  <section class="login_form_container" fxLayout="column" fxLayoutAlign="center center">
+    <form class="login_form" #f="ngForm" (ngSubmit)="onLoginSubmit(f)" fxLayout="column" fxLayoutAlign="center center">
+      <label class="login_title" >Login</label>
+      <mat-form-field appearance="fill">
+        <mat-label class="login_form_color">Email</mat-label>
+        <input type="email"
+          matInput
+          ngModel
+          name="email"
+          placeholder="example@gmail.com"
+          class="login_form_color"
+          minlength="6"
+          email
+          required>
+        <mat-error *ngIf="f.form.get('email')?.invalid">Invalid Email</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill" hintLabel="Should be at least 8 charecters">
+        <mat-label class="login_form_color">Password</mat-label>
+        <input class="login_form_color"
+          type="password"
+          matInput
+          ngModel
+          name="password"
+          required
+          minlength="8"
+          #pswd="ngModel">
+        <mat-error *ngIf="f.form.get('password')?.invalid">Invalid Password, Should be at least 8 charecters</mat-error>
+        <mat-hint align="end">{{pswd.value?.length}}/8</mat-hint>
+      </mat-form-field>
+
+      <br><br><br>
+
+      <button type="submit" mat-raised-button color="primary">Login</button>
+    </form>
+  </section>
+</div>

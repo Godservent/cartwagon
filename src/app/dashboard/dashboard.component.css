@@ -1,0 +1,25 @@
+.header_title{
+  background-color: rgba(245, 107, 57, 0.877);
+  color:white;
+  padding:6px;
+  border:none;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 30px;
+}
+.dashboard_menu_rightpanel{
+  float: right;
+}
+.dashboard_searchbar{
+  border-radius: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 360px;
+  background-color: rgb(120, 209, 135);
+  text-align: center;
+  height: 50px;
+}
+.dashboard_searchbar_field{
+  color:antiquewhite;
+}

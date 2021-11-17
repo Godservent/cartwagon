@@ -1,0 +1,49 @@
+<section>
+  <div>
+    <br>
+    <span class="header_title" >CartWagon</span>
+    <span class="dashboard_menu_rightpanel">
+      <button class="fitnesstracker"
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/fitnesstrainer']" routerLinkActive="router-link-active"
+        >FitnessTrainer</button>
+      <button class="dashboard_account" mat-button><mat-icon>account_circlet</mat-icon>Account</button>
+      <button class="dashboard_settings" mat-button><mat-icon>settings</mat-icon>Settings</button>
+    </span>
+  </div>
+  <div>
+    <br>
+    <br>
+    <!--SearchBar Field-->
+    <form #searchbarform="ngForm"
+      (ngSubmit)="searchbarsubmit(searchbarform)"
+      style="text-align: center;">
+      <mat-form-field class="dashboard_searchbar">
+        <!--//[(ngModel)]="productName"-->
+        <div>
+          <input class="dashboard_searchbar_field"
+            type="text"
+            matInput
+            [(ngModel)]="productName"
+            name="product_searchbar"
+            placeholder="Search Product here"
+            minlength="1"
+          >
+
+      </div>
+      </mat-form-field>
+      <button mat-icon-button type="submit"
+        color="primary"
+        >
+        <mat-icon>search</mat-icon>
+      </button>
+    </form>
+  </div>
+  <br>
+  <br>
+  <!--Products Filtering-->
+  <div *ngFor="let product of filteredProducts")>
+    {{product}}
+  </div>
+</section>
